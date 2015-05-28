@@ -1,0 +1,33 @@
+<div class="panel panel-default">
+	<div class="panel-heading">{{ title }}
+		<div class="btn-group pull-right" role="group">
+		     	<button type="button" class="btn btn-default dropdown-toggle btn-xs" data-toggle="dropdown" aria-expanded="false">
+				<i class="fa fa-cogs"></i>
+			</button>
+			<ul class="dropdown-menu" role="menu">
+				<li>
+					<a href="#" ng-click="dynamicLoad('paths/'+id, 'admin/sort_children', 'admin/element_sorter.html', 'bottomeditor')">
+					sort children
+					</a>
+				</li>
+				<li>
+					<a href="#" ng-click="serverSend('admin/add_child/paths/'+id)">
+					add child element
+					</a>
+				</li>
+				<li>
+					<a href="#" ng-click="dynamicLoad('path/'+id, 'admin/add_existing_child', NULL, 'bottomeditor')">
+					add existing child element
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+  	<div class="panel-body">
+ 		<div ng-repeat="element in elements">
+			<div mongolar mongolarid="{{ element }}" mongolartemplate="/admin/element.html"
+			mongolartype="admin/element" mongolardyn="{{ element }}">
+			</div>
+		</div>
+   	</div>
+</div>

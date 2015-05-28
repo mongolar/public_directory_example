@@ -1,0 +1,27 @@
+<ul class="list-group">
+<li class="list-group-item" ng-repeat="path in content">
+	<div>
+		<a href="#" ng-click="dynamicLoad(path.id, 'admin/path_elements', 'admin/path_elements.html', 'centereditor')">
+		{{ path.path }} 
+		</a><span ng-if="path.wildcard == true">*</span>
+		 <div class="btn-group pull-right" role="group">
+		     	<button type="button" class="btn btn-default dropdown-toggle btn-xs" data-toggle="dropdown" aria-expanded="false">
+				<i class="fa fa-cogs"></i>
+			</button>
+			<ul class="dropdown-menu" role="menu">
+				<li>
+					<a href="#" ng-click="dynamicLoad(path.id, 'admin/path_editor', NULL, 'bottomeditor')">
+					edit
+					</a>
+				</li>
+				<li>
+					<a href="#" ng-click="serverSend('admin/delete/paths/'+path.id);">
+					delete
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</li>
+</ul>
+<button ng-click="dynamicLoad('new', 'admin/path_editor', NULL, 'bottomeditor')" class="btn btn-primary submit-button">Add Path</button>

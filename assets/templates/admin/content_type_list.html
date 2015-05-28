@@ -1,0 +1,10 @@
+<ul class="list-group">
+<li class="list-group-item" ng-repeat="type in content_types">
+	<div>
+		<a href="#" ng-click="dynamicLoad(type.id, 'admin/edit_content_type', NULL, 'centereditor')">
+		{{ type.type }} 
+		</a>
+	</div>
+</li>
+</ul>
+<button ng-click="dynamicLoad('new', 'admin/edit_content_type', NULL, 'centereditor')" class="btn btn-primary submit-button">Add Content Type</button>

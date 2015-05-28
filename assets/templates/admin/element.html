@@ -1,0 +1,45 @@
+<div class="element panel panel-default">
+	<div class="panel-heading">{{ title }}
+		<div class="btn-group pull-right" role="group">
+		     	<button type="button" class="btn btn-default dropdown-toggle btn-xs" data-toggle="dropdown" aria-expanded="false">
+				<i class="fa fa-cogs"></i>
+			</button>
+			<ul class="dropdown-menu" role="menu">
+				<li>
+					<a href="#" ng-click="dynamicLoad(id, 'admin/element_editor', NULL, 'bottomeditor')"> edit </a>
+				</li>
+				<li ng-if="controller == 'content'">
+					<a href="#" ng-click="dynamicLoad(id, 'admin/content_type', 'admin/form.html', 'bottomeditor')">change content type </a>
+				</li>
+				<li ng-if="controller == 'content'">
+					<a href="#" ng-click="dynamicLoad(id, 'admin/content', 'admin/form.html', 'bottomeditor')">content values </a>
+				</li>
+				<li ng-if="controller == 'wrapper'">
+                                        <a href="#" ng-click="dynamicLoad('elements/'+id, 'admin/sort_children', NULL, 'bottomeditor')">
+                                        sort children
+                                        </a>
+                                </li>
+				<li ng-if="controller == 'wrapper'">
+                                	<a href="#" ng-click="dynamicLoad('elements/'+id, 'admin/add_child', NULL, 'bottomeditor')">
+                                        add child element
+                                        </a>
+                                </li>
+                                <li>
+                                        <a href="#" ng-click="serverSend('admin/delete/elements/'+id)">
+                                        delete
+                                        </a>
+                                </li>
+
+			</ul>
+		</div>
+	</div>
+	<div ng-if="elements">
+		<div class="panel-body">
+			<div ng-repeat="child in elements">
+				<div mongolar mongolarid="{{ child }}" mongolartemplate="admin/element.html"
+					mongolartype="admin/element">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

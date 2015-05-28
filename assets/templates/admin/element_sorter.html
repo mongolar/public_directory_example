@@ -1,0 +1,12 @@
+<div class="container">
+	<div ui-sortable="sortableOptions" ng-model="elements">
+		<div class="panel panel-default" ng-repeat="child in elements">
+			<div mongolar mongolarid="{{ child }}" mongolartemplate="admin/sortable_element.html"
+				mongolartype="admin/element">
+			</div>
+		</div>
+	</div>	
+	<button type="submit" ng-click="scopeSend(mongolartype + '/' +  mongolarid, {'elements': elements})" class="btn btn-primary submit-button">Submit</button>
+	<button type="submit" ng-click="dynamicLoad(NULL, NULL, NULL, 'bottomeditor')" class="btn btn-danger submit-button">Close</button>
+
+</div>
