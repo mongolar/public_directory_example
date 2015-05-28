@@ -1,0 +1,4 @@
+assets/*
+!assets/templates
+!assets/js
+!assets/css
