@@ -6,26 +6,26 @@
 			</button>
 			<ul class="dropdown-menu" role="menu">
 				<li>
-					<a href="#" ng-click="dynamicLoad(id, 'admin/element_editor', NULL, 'righteditor')"> edit </a>
+					<a href="#" ng-click="dynamicLoad(mongolarid, 'admin/element_editor', NULL, 'righteditor')"> edit </a>
 				</li>
-				<li ng-if="controller == 'content'">
-					<a href="#" ng-click="dynamicLoad(id, 'admin/content_type', 'admin/form.html', 'righteditor')">change content type </a>
+				<li ng-if="mongolartype == 'content'">
+					<a href="#" ng-click="dynamicLoad(mongolarid, 'admin/content_type', 'admin/form.html', 'righteditor')">change content type </a>
 				</li>
-				<li ng-if="controller == 'content'">
-					<a href="#" ng-click="dynamicLoad(id, 'admin/content', 'admin/form.html', 'righteditor')">content values </a>
+				<li ng-if="mongolartype == 'content'">
+					<a href="#" ng-click="dynamicLoad(mongolarid, 'admin/content', 'admin/form.html', 'righteditor')">content values </a>
 				</li>
-				<li ng-if="controller == 'wrapper'">
-                                        <a href="#" ng-click="dynamicLoad('elements/'+id, 'admin/sort_children', NULL, 'righteditor')">
+				<li ng-if="mongolartype == 'wrapper'">
+                                        <a href="#" ng-click="dynamicLoad('elements/'+mongolarid, 'admin/sort_children', NULL, 'righteditor')">
                                         sort children
                                         </a>
                                 </li>
-				<li ng-if="controller == 'wrapper'">
-                                	<a href="#" ng-click="dynamicLoad('elements/'+id, 'admin/add_child', NULL, 'righteditor')">
+				<li ng-if="mongolartype == 'wrapper'">
+                                	<a href="#" ng-click="dynamicLoad('elements/'+mongolarid, 'admin/add_child', NULL, 'righteditor')">
                                         add child element
                                         </a>
                                 </li>
                                 <li>
-                                        <a href="#" ng-click="serverSend('admin/delete/elements/'+id)">
+                                        <a href="#" ng-click="serverSend('admin/delete/elements/'+mongolarid)">
                                         delete
                                         </a>
                                 </li>
