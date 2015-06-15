@@ -1,6 +1,13 @@
-<div class="btn-group" role="group" aria-label="...">
-		<button ng-repeat="child in content.menu_items"
-			type="button" class="btn btn-default" ng-click="dynamicLoad('', '', child.template, 'maincontent')">
+<nav class="navbar navbar-default">
+
+<div class="container">
+		<div class="navbar-brand">Mongolar Admin</div>
+<ul class="nav navbar-nav">
+		<li ng-repeat="child in content.menu_items">
+			<a href="#" ng-click="dynamicLoad('', '', child.template, 'maincontent')">
 			{{ child.title }}
-		</button>
+			</a>
+		</li>
+</ul>
 </div>
+</nav>

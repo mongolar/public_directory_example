@@ -6,21 +6,21 @@
 			</button>
 			<ul class="dropdown-menu" role="menu">
 				<li>
-					<a href="#" ng-click="dynamicLoad(id, 'admin/element_editor', NULL, 'bottomeditor')"> edit </a>
+					<a href="#" ng-click="dynamicLoad(id, 'admin/element_editor', NULL, 'righteditor')"> edit </a>
 				</li>
 				<li ng-if="controller == 'content'">
-					<a href="#" ng-click="dynamicLoad(id, 'admin/content_type', 'admin/form.html', 'bottomeditor')">change content type </a>
+					<a href="#" ng-click="dynamicLoad(id, 'admin/content_type', 'admin/form.html', 'righteditor')">change content type </a>
 				</li>
 				<li ng-if="controller == 'content'">
-					<a href="#" ng-click="dynamicLoad(id, 'admin/content', 'admin/form.html', 'bottomeditor')">content values </a>
+					<a href="#" ng-click="dynamicLoad(id, 'admin/content', 'admin/form.html', 'righteditor')">content values </a>
 				</li>
 				<li ng-if="controller == 'wrapper'">
-                                        <a href="#" ng-click="dynamicLoad('elements/'+id, 'admin/sort_children', NULL, 'bottomeditor')">
+                                        <a href="#" ng-click="dynamicLoad('elements/'+id, 'admin/sort_children', NULL, 'righteditor')">
                                         sort children
                                         </a>
                                 </li>
 				<li ng-if="controller == 'wrapper'">
-                                	<a href="#" ng-click="dynamicLoad('elements/'+id, 'admin/add_child', NULL, 'bottomeditor')">
+                                	<a href="#" ng-click="dynamicLoad('elements/'+id, 'admin/add_child', NULL, 'righteditor')">
                                         add child element
                                         </a>
                                 </li>
