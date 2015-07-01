@@ -1,4 +1,5 @@
-<div class="element-sorter well">
+<div class="modal-overlay">
+<div class="element-sorter well container">
 	<div ui-sortable="sortableOptions" ng-model="elements">
 		<div class="panel panel-default" ng-repeat="child in elements">
 			<div mongolar mongolarid="{{ child }}" mongolartemplate="admin/sortable_element.html"
@@ -6,7 +7,7 @@
 			</div>
 		</div>
 	</div>	
-	<button type="submit" ng-click="scopeSend(mongolartype + '/' +  mongolarid, {'elements': elements})" class="btn btn-primary submit-button">Submit</button>
-	<button type="submit" ng-click="dynamicLoad(NULL, NULL, NULL, 'righteditor')" class="btn btn-danger submit-button">Close</button>
-
+	<button type="submit" ng-click="scopeSend(mongolartype + '/' +  mongolarid, {'elements': elements}); dynamicLoad(NULL, NULL, NULL, 'modaleditor')" class="btn btn-primary submit-button">Submit</button>
+	<button type="submit" ng-click="dynamicLoad(NULL, NULL, NULL, 'modaleditor')" class="btn btn-danger submit-button">Close</button>
+</div>
 </div>

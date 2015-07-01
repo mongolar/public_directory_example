@@ -1,0 +1,19 @@
+<div class="menu-editor" ng-controller="MenuEditor">
+	<div class="form-inline">
+		<input type="text" ng-model="item.title" class="form-control" placeholder="Title">
+		<input type="text" ng-model="item.url" class="form-control" placeholder="URL">
+		<div class="btn-group pull-right" role="group">
+		     	<button type="button" class="btn btn-default dropdown-toggle btn-xs" data-toggle="dropdown" aria-expanded="false">
+				<i class="fa fa-cogs"></i>
+			</button>
+			<ul class="dropdown-menu" role="menu">
+				<li>
+					<a href="#" ng-click="AddNewChild(item.menu_items)"> add child </a>
+					<a href="#" ng-click="Delete($index)"> delete </a>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+	<div ng-repeat="item in item.menu_items as parentmenu" ng-include src="'assets/templates/admin/menu_item.html'"></div>
+</div>

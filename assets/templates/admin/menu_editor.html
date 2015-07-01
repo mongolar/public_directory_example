@@ -1,0 +1,24 @@
+<div class="modal-overlay">
+<div class="menu-editor-wrapper panel panel-default container" ng-controller="MenuEditor">
+	<div class="panel-heading">
+		<span class="title">{{ title }}</span>
+		<div class="btn-group pull-right" role="group">
+			<button type="button" class="btn btn-default dropdown-toggle btn-xs" data-toggle="dropdown" aria-expanded="false">
+				<i class="fa fa-cogs"></i>
+			</button>
+			<ul class="dropdown-menu" role="menu">
+				<li>
+					<a href="#" ng-click="AddNewChild(menu.menu_items)"> add child </a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="panel-body">
+		<div ng-repeat="item in menu.menu_items as parentmenu" ng-include src="'assets/templates/admin/menu_item.html'"></div>
+	</div>
+	<button type="submit" ng-click="scopeSend(mongolartype + '/' + mongolarid, menu)" class="btn btn-danger submit-button">Submit</button>
+	<button type="submit" ng-click="dynamicLoad(NULL, NULL, NULL, 'modaleditor')" class="btn btn-danger submit-button">Close</button>
+
+</div>
+</div>

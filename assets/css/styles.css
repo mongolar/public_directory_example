@@ -13,22 +13,33 @@ body { padding-bottom: 70px; }
 .admin-content {
     padding-top:70px;
 }
-.right-editor {
+
+.modal-overlay {
     position: absolute;
-    top:70px;
-    right: -30px;
-    padding: 10px 20px 100px 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 150%;
+    z-index: 1500;
+    padding-top: 100px;
 }
-.well.right-editor-container {
+
+.menu-editor {
+    padding: 5px 0px 5px 20px ;
+    margin-right: 0px;
+    min-width: 600px;
+}
+
+.menu-editor .form-inline{
+	padding-right: 15px;
+}
+
+.well.right-editor-container, .right-editor .menu-editor-wrapper{
 	border: 1px solid #2c3e50;
 }
 
 .right-editor .element-sorter{
 
 	border: 1px solid #2c3e50;
-	width: 1200px;
-}
-.admin-wrapper .formly-field{
 	width: 1200px;
 }
 

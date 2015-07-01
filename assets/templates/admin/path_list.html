@@ -10,7 +10,7 @@
 			</button>
 			<ul class="dropdown-menu" role="menu">
 				<li>
-					<a href="#" ng-click="dynamicLoad(path.id, 'admin/path_editor', NULL, 'righteditor')">
+					<a href="#" ng-click="dynamicLoad(path.id, 'admin/path_editor', NULL, 'modaleditor')">
 					edit
 					</a>
 				</li>
@@ -24,6 +24,6 @@
 	</div>
 </li>
 </ul>
-<button ng-click="dynamicLoad('new', 'admin/path_editor', NULL, 'righteditor')" class="btn btn-primary submit-button">Add Path</button>
+<button ng-click="dynamicLoad('new', 'admin/path_editor', NULL, 'modaleditor')" class="btn btn-primary submit-button">Add Path</button>
 
 <button ng-click="dynamicLoad(NULL, 'admin/orphans', 'admin/orphan_path_elements.html', 'centereditor')" class="btn btn-primary submit-button">Orphan Elements</button>

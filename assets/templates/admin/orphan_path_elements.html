@@ -9,26 +9,26 @@
 					</button>
 					<ul class="dropdown-menu" role="menu">
 						<li>
-							<a href="#" ng-click="dynamicLoad(element.id, 'admin/element_editor', NULL, 'righteditor')"> edit </a>
+							<a href="#" ng-click="dynamicLoad(element.mongolarid, 'admin/element_editor', NULL, 'modaleditor')"> edit </a>
 						</li>
 						<li ng-if="controller == 'content'">
-							<a href="#" ng-click="dynamicLoad(element.id, 'admin/content_type', 'admin/form.html', 'righteditor')">change content type </a>
+							<a href="#" ng-click="dynamicLoad(element.mongolarid, 'admin/content_type', 'admin/form.html', 'modaleditor')">change content type </a>
 						</li>
 						<li ng-if="controller == 'content'">
-							<a href="#" ng-click="dynamicLoad(element.id, 'admin/content', 'admin/form.html', 'righteditor')">content values </a>
+							<a href="#" ng-click="dynamicLoad(element.mongolarid, 'admin/content', 'admin/form.html', 'modaleditor')">content values </a>
 						</li>
 						<li ng-if="controller == 'wrapper'">
-							<a href="#" ng-click="dynamicLoad('elements/'+element.id, 'admin/sort_children', NULL, 'righteditor')">
+							<a href="#" ng-click="dynamicLoad('elements/'+element.mongolarid, 'admin/sort_children', NULL, 'modaleditor')">
 							sort children
 							</a>
 						</li>
 						<li ng-if="controller == 'wrapper'">
-							<a href="#" ng-click="dynamicLoad('elements/'+element.id, 'admin/add_child', NULL, 'righteditor')">
+							<a href="#" ng-click="dynamicLoad('elements/'+element.mongolarid, 'admin/add_child', NULL, 'modaleditor')">
 							add child element
 							</a>
 						</li>
 						<li>
-							<a href="#" ng-click="serverSend('admin/delete/elements/'+element.id)">
+							<a href="#" ng-click="serverSend('admin/delete/elements/'+element.mongolarid)">
 							delete
 							</a>
 						</li>

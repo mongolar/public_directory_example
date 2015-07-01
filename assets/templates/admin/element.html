@@ -6,22 +6,42 @@
 			</button>
 			<ul class="dropdown-menu" role="menu">
 				<li>
-					<a href="#" ng-click="dynamicLoad(mongolarid, 'admin/element_editor', NULL, 'righteditor')"> edit </a>
+					<a href="#" ng-click="dynamicLoad(mongolarid, 'admin/element_editor', NULL, 'modaleditor')"> edit </a>
 				</li>
 				<li ng-if="mongolartype == 'content'">
-					<a href="#" ng-click="dynamicLoad(mongolarid, 'admin/content_type', 'admin/form.html', 'righteditor')">change content type </a>
+					<a href="#" ng-click="dynamicLoad(mongolarid, 'admin/content_type', 'admin/form.html', 'modaleditor')">change content type </a>
 				</li>
 				<li ng-if="mongolartype == 'content'">
-					<a href="#" ng-click="dynamicLoad(mongolarid, 'admin/content', 'admin/form.html', 'righteditor')">content values </a>
+					<a href="#" ng-click="dynamicLoad(mongolarid, 'admin/content', 'admin/form.html', 'modaleditor')">content values </a>
 				</li>
 				<li ng-if="mongolartype == 'wrapper'">
-                                        <a href="#" ng-click="dynamicLoad('elements/'+mongolarid, 'admin/sort_children', NULL, 'righteditor')">
+                                        <a href="#" ng-click="dynamicLoad('wrapper/'+mongolarid, 'admin/sort_children', NULL, 'modaleditor')">
                                         sort children
                                         </a>
                                 </li>
 				<li ng-if="mongolartype == 'wrapper'">
-                                	<a href="#" ng-click="dynamicLoad('elements/'+mongolarid, 'admin/add_child', NULL, 'righteditor')">
+                                	<a href="#" ng-click="dynamicLoad('wrapper/'+mongolarid, 'admin/add_child', NULL, 'modaleditor')">
                                         add child element
+                                        </a>
+                                </li>
+				<li ng-if="mongolartype == 'wrapper'">
+                                	<a href="#" ng-click="dynamicLoad('wrapper/'+mongolarid, 'admin/add_existing_child', NULL, 'modaleditor')">
+                                        add existing child element
+                                        </a>
+                                </li>
+				<li ng-if="mongolartype == 'slug'">
+                                	<a href="#" ng-click="dynamicLoad(mongolarid, 'admin/slug_url_editor', NULL, 'modaleditor')">
+                                        edit slug urls
+                                        </a>
+                                </li>
+				<li ng-if="mongolartype == 'slug'">
+                                	<a href="#" ng-click="dynamicLoad('slug/'+mongolarid, 'admin/add_child', NULL, 'modaleditor')">
+                                        add child element
+                                        </a>
+                                </li>
+				<li ng-if="mongolartype == 'menu'">
+                                	<a href="#" ng-click="dynamicLoad(mongolarid, 'admin/menu', NULL, 'modaleditor')">
+                                        edit menu
                                         </a>
                                 </li>
                                 <li>
@@ -36,7 +56,7 @@
 	<div ng-if="elements">
 		<div class="panel-body">
 			<div ng-repeat="child in elements">
-				<div mongolar mongolarid="{{ child }}" mongolartemplate="admin/element.html"
+				<div mongolar mongolarid="{{ child }}" mongolartemplate="admin/element.html" mongolardyn="{{ child }}"
 					mongolartype="admin/element">
 				</div>
 			</div>
