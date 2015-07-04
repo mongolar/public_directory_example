@@ -1,0 +1,4 @@
+<li>
+<a href="{{ child.url }}">{{ child.title }}</a>
+<ul ng-repeat="child in child.menu_items"  ng-include src="'assets/templates/menu_item.html'"></ul>
+</li>

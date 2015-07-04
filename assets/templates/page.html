@@ -1,5 +1,9 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.4/yeti/bootstrap.min.css">
+
+<div class="container" mongolar mongolarid="site_name" mongolartemplate="site_name.html" mongolartype="domain_public_value">
+</div>
 <div ng-repeat="element in content" class="container">
 	<div mongolar mongolarid="{{ element.mongolarid }}" mongolartemplate="{{ element.mongolartemplate || 'default' }}"
-		mongolartype="{{ element.mongolartype }}" mongolardyn="{{ element.mongolardynamicid }}" >
+		mongolartype="{{ element.mongolartype }}" mongolardyn="{{ element.mongolardynamicid }}" mongolarclasses="{{ element.mongolarclasses }}">
 	</div>
 </div>
